@@ -26,19 +26,21 @@ class SquareTests: XCTestCase {
     func testSquareEqual() {
         let square0 = Square(row: 2, column: 5)
         let square1 = Square(row: 2, column: 5)
-        // when comparing squares, need to use == operator, not XCTAssertEqual
+        XCTAssertEqual(square1, square0)
         XCTAssertTrue(square1 == square0)
     }
 
     func testSquareNotEqualColumn() {
         let square0 = Square(row: 2, column: 5)
         let square1 = Square(row: 2, column: 4)
+        XCTAssertNotEqual(square1, square0)
         XCTAssertFalse(square1 == square0)
     }
 
     func testSquareNotEqualRow() {
         let square0 = Square(row: 6, column: 5)
         let square1 = Square(row: 2, column: 5)
+        XCTAssertNotEqual(square1, square0)
         XCTAssertFalse(square1 == square0)
     }
 

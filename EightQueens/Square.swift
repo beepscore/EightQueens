@@ -21,9 +21,15 @@ public class Square: NSObject {
         self.column = column
     }
 
-    // hashValue does not have to be unique
-    override public var hashValue: Int {
-        return (8 * row) + column
+    /// override isEqual enables comparing instances via isEqual, XCTAssertEqual and ==
+    /// so it is more general than simply defining func '==' for 2 Square
+    override public func isEqual(_ x: Any?) -> Bool {
+        guard let x = x as? Square else {
+            return false
+        }
+        let rowEqual = row == x.row
+        let columnEqual = column == x.column
+        return rowEqual && columnEqual
     }
 
     /// computed property
@@ -31,16 +37,4 @@ public class Square: NSObject {
     override public var description: String {
         return "(row: \(row), column: \(column))"
     }
-
-}
-
-/// implement Equatable, outside of class Square
-/// - Parameters:
-///   - lhs: a Square
-///   - rhs: a Square
-/// - Returns: true if all properties are equal
-public func == (lhs: Square, rhs: Square) -> Bool {
-    let rowEqual = lhs.row == rhs.row
-    let columnEqual = lhs.column == rhs.column
-    return rowEqual && columnEqual
 }
