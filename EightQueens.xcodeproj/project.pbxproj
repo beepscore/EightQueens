@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DE3BFB3C1ED26D5700A8893D /* QueenChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BFB3B1ED26D5700A8893D /* QueenChecker.swift */; };
+		DE3BFB3E1ED2750A00A8893D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BFB3D1ED2750A00A8893D /* Square.swift */; };
+		DE3BFB401ED2779D00A8893D /* SquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BFB3F1ED2779D00A8893D /* SquareTests.swift */; };
 		DED495F51ED269250038359B /* EightQueens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED495EB1ED269250038359B /* EightQueens.framework */; };
 		DED495FA1ED269250038359B /* QueenCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED495F91ED269250038359B /* QueenCheckerTests.swift */; };
 		DED495FC1ED269250038359B /* EightQueens.h in Headers */ = {isa = PBXBuildFile; fileRef = DED495EE1ED269250038359B /* EightQueens.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		DE3BFB3B1ED26D5700A8893D /* QueenChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueenChecker.swift; sourceTree = "<group>"; };
+		DE3BFB3D1ED2750A00A8893D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		DE3BFB3F1ED2779D00A8893D /* SquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareTests.swift; sourceTree = "<group>"; };
 		DED495EB1ED269250038359B /* EightQueens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EightQueens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED495EE1ED269250038359B /* EightQueens.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EightQueens.h; sourceTree = "<group>"; };
 		DED495EF1ED269250038359B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				DED495EE1ED269250038359B /* EightQueens.h */,
 				DED495EF1ED269250038359B /* Info.plist */,
 				DE3BFB3B1ED26D5700A8893D /* QueenChecker.swift */,
+				DE3BFB3D1ED2750A00A8893D /* Square.swift */,
 			);
 			path = EightQueens;
 			sourceTree = "<group>";
@@ -85,6 +90,7 @@
 			children = (
 				DED495F91ED269250038359B /* QueenCheckerTests.swift */,
 				DED495FB1ED269250038359B /* Info.plist */,
+				DE3BFB3F1ED2779D00A8893D /* SquareTests.swift */,
 			);
 			path = EightQueensTests;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3BFB3E1ED2750A00A8893D /* Square.swift in Sources */,
 				DE3BFB3C1ED26D5700A8893D /* QueenChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3BFB401ED2779D00A8893D /* SquareTests.swift in Sources */,
 				DED495FA1ED269250038359B /* QueenCheckerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
