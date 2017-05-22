@@ -1,5 +1,5 @@
 //
-//  EightQueensTests.swift
+//  QueenCheckerTests.swift
 //  EightQueensTests
 //
 //  Created by Steve Baker on 5/21/17.
