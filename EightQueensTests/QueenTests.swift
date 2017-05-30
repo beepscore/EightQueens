@@ -23,4 +23,15 @@ class QueenTests: XCTestCase {
         XCTAssertFalse(queen.doesAttackOnRow(square: Square(row: 3, column: 7)))
     }
 
+    func testDoesAttackOnColumnTrue() {
+        let queen_square = Square(row: 2, column: 4)
+        let queen = Queen(square: queen_square)
+        XCTAssertTrue(queen.doesAttackOnColumn(square: Square(row: 0, column: 4)))
+    }
+
+    func testDoesAttackOnColumnFalse() {
+        let queen_square = Square(row: 2, column: 4)
+        let queen = Queen(square: queen_square)
+        XCTAssertFalse(queen.doesAttackOnColumn(square: Square(row: 0, column: 3)))
+    }
 }
