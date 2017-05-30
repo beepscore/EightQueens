@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE10158C1EDD467600BFE6D6 /* Queen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10158B1EDD467600BFE6D6 /* Queen.swift */; };
+		DE10158E1EDD50A100BFE6D6 /* QueenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10158D1EDD50A100BFE6D6 /* QueenTests.swift */; };
 		DE3BFB3C1ED26D5700A8893D /* QueenChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BFB3B1ED26D5700A8893D /* QueenChecker.swift */; };
 		DE3BFB3E1ED2750A00A8893D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BFB3D1ED2750A00A8893D /* Square.swift */; };
 		DE3BFB401ED2779D00A8893D /* SquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3BFB3F1ED2779D00A8893D /* SquareTests.swift */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		DE10158A1EDD448F00BFE6D6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DE10158B1EDD467600BFE6D6 /* Queen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queen.swift; sourceTree = "<group>"; };
+		DE10158D1EDD50A100BFE6D6 /* QueenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueenTests.swift; sourceTree = "<group>"; };
 		DE3BFB3B1ED26D5700A8893D /* QueenChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueenChecker.swift; sourceTree = "<group>"; };
 		DE3BFB3D1ED2750A00A8893D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		DE3BFB3F1ED2779D00A8893D /* SquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareTests.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				DED495EE1ED269250038359B /* EightQueens.h */,
 				DED495EF1ED269250038359B /* Info.plist */,
+				DE10158B1EDD467600BFE6D6 /* Queen.swift */,
 				DE3BFB3B1ED26D5700A8893D /* QueenChecker.swift */,
 				DE3BFB3D1ED2750A00A8893D /* Square.swift */,
 			);
@@ -92,6 +97,7 @@
 			children = (
 				DED495F91ED269250038359B /* QueenCheckerTests.swift */,
 				DED495FB1ED269250038359B /* Info.plist */,
+				DE10158D1EDD50A100BFE6D6 /* QueenTests.swift */,
 				DE3BFB3F1ED2779D00A8893D /* SquareTests.swift */,
 			);
 			path = EightQueensTests;
@@ -210,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE10158C1EDD467600BFE6D6 /* Queen.swift in Sources */,
 				DE3BFB3E1ED2750A00A8893D /* Square.swift in Sources */,
 				DE3BFB3C1ED26D5700A8893D /* QueenChecker.swift in Sources */,
 			);
@@ -221,6 +228,7 @@
 			files = (
 				DE3BFB401ED2779D00A8893D /* SquareTests.swift in Sources */,
 				DED495FA1ED269250038359B /* QueenCheckerTests.swift in Sources */,
+				DE10158E1EDD50A100BFE6D6 /* QueenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
