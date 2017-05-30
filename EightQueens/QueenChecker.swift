@@ -17,18 +17,4 @@ class QueenChecker: NSObject {
 
  */
 
-    class func foo() -> Bool {
-        return true
-    }
-
-    class func queenSeesSquare(queenRow: Int, queenColumn: Int, row: Int, column: Int) -> Bool {
-        return false
-    }
-
-    class func squaresShareADiagonal(aSquare: Square, bSquare: Square) -> Bool {
-        // move 45 degrees from a to edge of board
-        // if don't hit b then return false
-        return true
-    }
-
 }

@@ -11,8 +11,5 @@ import XCTest
 
 class QueenCheckerTests: XCTestCase {
     
-    func testFoo() {
-        XCTAssertTrue(QueenChecker.foo())
-   }
-    
+
 }
