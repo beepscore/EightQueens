@@ -53,4 +53,28 @@ class QueenTests: XCTestCase {
         XCTAssertFalse(queen.doesAttackOnDiagonal(square: Square(row: 2, column: 6)))
     }
 
+    func testDoesAttackTrue() {
+        let queen_square = Square(row: 5, column: 3)
+        let queen = Queen(square: queen_square)
+        // test all neighbors
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 5, column: 2)))
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 5, column: 4)))
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 4, column: 3)))
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 6, column: 3)))
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 4, column: 2)))
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 6, column: 4)))
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 4, column: 4)))
+        XCTAssertTrue(queen.doesAttack(square: Square(row: 6, column: 2)))
+    }
+
+    func testDoesAttackFalse() {
+        let queen_square = Square(row: 5, column: 3)
+        let queen = Queen(square: queen_square)
+        // test all neighbors
+        XCTAssertFalse(queen.doesAttack(square: Square(row: 0, column: 0)))
+        XCTAssertFalse(queen.doesAttack(square: Square(row: 6, column: 7)))
+        XCTAssertFalse(queen.doesAttack(square: Square(row: 7, column: 7)))
+    }
+
+
 }
