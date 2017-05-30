@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE10158A1EDD448F00BFE6D6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DE3BFB3B1ED26D5700A8893D /* QueenChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueenChecker.swift; sourceTree = "<group>"; };
 		DE3BFB3D1ED2750A00A8893D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		DE3BFB3F1ED2779D00A8893D /* SquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareTests.swift; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		DED495E11ED269250038359B = {
 			isa = PBXGroup;
 			children = (
+				DE10158A1EDD448F00BFE6D6 /* README.md */,
 				DED495ED1ED269250038359B /* EightQueens */,
 				DED495F81ED269250038359B /* EightQueensTests */,
 				DED495EC1ED269250038359B /* Products */,
