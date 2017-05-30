@@ -34,4 +34,23 @@ class QueenTests: XCTestCase {
         let queen = Queen(square: queen_square)
         XCTAssertFalse(queen.doesAttackOnColumn(square: Square(row: 0, column: 3)))
     }
+
+    func testDoesAttackOnDiagonalPositiveTrue() {
+        let queen_square = Square(row: 2, column: 5)
+        let queen = Queen(square: queen_square)
+        XCTAssertTrue(queen.doesAttackOnDiagonal(square: Square(row: 3, column: 6)))
+    }
+
+    func testDoesAttackOnDiagonalNegativeTrue() {
+        let queen_square = Square(row: 2, column: 5)
+        let queen = Queen(square: queen_square)
+        XCTAssertTrue(queen.doesAttackOnDiagonal(square: Square(row: 3, column: 4)))
+    }
+
+    func testDoesAttackOnDiagonalFalse() {
+        let queen_square = Square(row: 2, column: 5)
+        let queen = Queen(square: queen_square)
+        XCTAssertFalse(queen.doesAttackOnDiagonal(square: Square(row: 2, column: 6)))
+    }
+
 }

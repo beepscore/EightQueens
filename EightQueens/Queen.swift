@@ -24,8 +24,7 @@ class Queen: NSObject {
     func doesAttack(square: Square) -> Bool {
         let attacks = (doesAttackOnRow(square: square)
         || doesAttackOnColumn(square: square)
-        || doesAttackOnDiagonalPositive(square: square)
-        || doesAttackOnDiagonalNegative(square: square))
+        || doesAttackOnDiagonal(square: square))
         return attacks
     }
 
@@ -42,19 +41,13 @@ class Queen: NSObject {
     }
 
     /// - Parameter square: square to check
-    /// - Returns: true if queen attacks via a diagonal with positive slope
+    /// - Returns: true if queen attacks square via either positive or negative sloped diagonal
     /// returns false otherwise
-    func doesAttackOnDiagonalPositive(square: Square) -> Bool {
-        // FIXME:
-        return false
-    }
-
-    /// - Parameter square: square to check
-    /// - Returns: true if queen attacks via a diagonal with negative slope
-    /// returns false otherwise
-    func doesAttackOnDiagonalNegative(square: Square) -> Bool {
-        // FIXME:
-        return false
+    func doesAttackOnDiagonal(square: Square) -> Bool {
+        let rowDifference = self.square.row - square.row
+        let columnDifference = self.square.column - square.column
+        // absolute value handles both diagonals, positive and negative slope
+        return abs(rowDifference) == abs(columnDifference)
     }
 
 }
