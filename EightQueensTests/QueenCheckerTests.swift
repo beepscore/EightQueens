@@ -15,12 +15,14 @@ class QueenCheckerTests: XCTestCase {
         var results: [[Queen]] = []
         QueenChecker.waysToPlaceQueen(boardSize: 1, queens: [], results: &results)
         XCTAssertEqual(results.count, 1)
+        XCTAssertEqual(results.description, "[[(row: 0, column: 0)]]")
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize2() {
         var results: [[Queen]] = []
         QueenChecker.waysToPlaceQueen(boardSize: 2, queens: [], results: &results)
         XCTAssertEqual(results.count, 0)
+        XCTAssertEqual(results.description, "[]")
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize3() {
@@ -33,6 +35,8 @@ class QueenCheckerTests: XCTestCase {
         var results: [[Queen]] = []
         QueenChecker.waysToPlaceQueen(boardSize: 4, queens: [], results: &results)
         XCTAssertEqual(results.count, 2)
+        let expectedDescription = "[[(row: 0, column: 1), (row: 1, column: 3), (row: 2, column: 0), (row: 3, column: 2)], [(row: 0, column: 2), (row: 1, column: 0), (row: 2, column: 3), (row: 3, column: 1)]]"
+        XCTAssertEqual(results.description, expectedDescription)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize5() {
