@@ -31,6 +31,11 @@ class QueenCheckerTests: XCTestCase {
         XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 5, queens: []), 10)
     }
 
+    func testNumberOfWaysToPlaceQueenBoardSize6() {
+        // note board size 6 has fewer solutions than board size 5 (sic)
+        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 6, queens: []), 4)
+    }
+
     func testNumberOfWaysToPlaceQueenBoardSize8() {
         // expected value per https://en.wikipedia.org/wiki/Eight_queens_puzzle
         // expect 92 got 0
