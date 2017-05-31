@@ -12,37 +12,53 @@ import XCTest
 class QueenCheckerTests: XCTestCase {
     
     func testNumberOfWaysToPlaceQueenBoardSize1() {
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 1, queens: []), 1)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 1, queens: [], results: &results)
+        XCTAssertEqual(results.count, 1)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize2() {
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 2, queens: []), 0)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 2, queens: [], results: &results)
+        XCTAssertEqual(results.count, 0)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize3() {
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 3, queens: []), 0)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 3, queens: [], results: &results)
+        XCTAssertEqual(results.count, 0)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize4() {
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 4, queens: []), 2)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 4, queens: [], results: &results)
+        XCTAssertEqual(results.count, 2)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize5() {
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 5, queens: []), 10)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 5, queens: [], results: &results)
+        XCTAssertEqual(results.count, 10)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize6() {
         // note board size 6 has fewer solutions than board size 5 (sic)
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 6, queens: []), 4)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 6, queens: [], results: &results)
+        XCTAssertEqual(results.count, 4)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize7() {
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 7, queens: []), 40)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 7, queens: [], results: &results)
+        XCTAssertEqual(results.count, 40)
     }
 
     func testNumberOfWaysToPlaceQueenBoardSize8() {
         // expected value per https://en.wikipedia.org/wiki/Eight_queens_puzzle
-        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(boardSize: 8, queens: []), 92)
+        var results: [[Queen]] = []
+        QueenChecker.waysToPlaceQueen(boardSize: 8, queens: [], results: &results)
+        XCTAssertEqual(results.count, 92)
     }
 
 }

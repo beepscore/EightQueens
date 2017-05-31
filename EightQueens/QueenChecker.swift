@@ -17,14 +17,13 @@ class QueenChecker: NSObject {
     /// - Parameter boardSize: board is square boardSize rows x boardSize columns
     ///   boardSize is 8 for standard chess board
     /// - Parameter queens: queens already on the board
-    /// - Returns: number of ways to put a new queen
-    class func numberOfWaysToPlaceQueen(boardSize: Int, queens: [Queen]) -> Int {
+    /// - Returns: ways to put a new queen
+    class func waysToPlaceQueen(boardSize: Int, queens: [Queen], results: inout [[Queen]]) {
 
         if queens.count == boardSize {
-            return 1
+            results.append(queens)
+            return
         }
-
-        var ways = 0
 
         // Each queen must be on a different row.
         // Eliminate unnecessary iterations by adding each queen on next row
@@ -33,19 +32,16 @@ class QueenChecker: NSObject {
         // in row, for every valid column, add ways
         for column in 0..<boardSize {
 
-            print("row", row, "column", column, "queens.count", queens.count)
-
             let currentSquare = Square(row: row, column: column)
             let isSquareOpen = !QueenChecker.doesAnyQueenAttack(queens: queens, square: currentSquare)
 
             if isSquareOpen {
-                // add new queen, increment ways
+                // add queen, recursively call waysToPlaceQueen
                 var queensAppended = queens
                 queensAppended.append(Queen(square: currentSquare))
-                ways += numberOfWaysToPlaceQueen(boardSize: boardSize, queens: queensAppended)
+                waysToPlaceQueen(boardSize: boardSize, queens: queensAppended, results: &results)
             }
         }
-        return ways
     }
 
     class func doesAnyQueenAttack(queens: [Queen], square: Square) -> Bool {
