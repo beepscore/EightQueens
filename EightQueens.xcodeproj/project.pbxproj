@@ -40,6 +40,7 @@
 		DED495F41ED269250038359B /* EightQueensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EightQueensTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED495F91ED269250038359B /* QueenCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueenCheckerTests.swift; sourceTree = "<group>"; };
 		DED495FB1ED269250038359B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEEBC49C1EDEAEAF0069387A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 		DED495E11ED269250038359B = {
 			isa = PBXGroup;
 			children = (
+				DEEBC49C1EDEAEAF0069387A /* LICENSE */,
 				DE10158A1EDD448F00BFE6D6 /* README.md */,
 				DED495ED1ED269250038359B /* EightQueens */,
 				DED495F81ED269250038359B /* EightQueensTests */,
