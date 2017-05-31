@@ -17,15 +17,14 @@ class QueenChecker: NSObject {
 
  */
 
-    // number of ways to place 8 queens = number of ways to put first * number of ways to put second, 
+    // number of ways to place 8 queens = number of ways to put first * number of ways to put second,
 
-    /// <#Description#>
-    ///
+    /// - Parameter boardSize: board is square boardSize rows x boardSize columns
     /// - Parameter queens: queens already on the board
     /// - Returns: number of ways to put a new queen
-    class func numberOfWaysToPlaceQueen(queens: [Queen]) -> Int {
+    class func numberOfWaysToPlaceQueen(boardSize: Int, queens: [Queen]) -> Int {
 
-        if queens.count == 8 {
+        if queens.count == boardSize {
             return 1
         }
 
@@ -36,11 +35,10 @@ class QueenChecker: NSObject {
         // for each position of first and second queen, return valid squares for third queen
         // for each position of queens 0,1,2, return valid squares for fourth queen
 
+        for row in 0..<boardSize {
+            for column in 0..<boardSize {
 
-        for row in 0..<7 {
-            for column in 0..<7 {
-
-                print("row", row, "column", column)
+                print("row", row, "column", column, "queens.count", queens.count)
                 
                 let currentSquare = Square(row: row, column: column)
 
@@ -57,7 +55,7 @@ class QueenChecker: NSObject {
                     // add new queen, increment ways
                     var queensAppended = queens
                     queensAppended.append(Queen(square: currentSquare))
-                    ways += numberOfWaysToPlaceQueen(queens: queensAppended)
+                    ways += numberOfWaysToPlaceQueen(boardSize: boardSize, queens: queensAppended)
                 }
 
             }
