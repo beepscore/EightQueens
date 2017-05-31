@@ -19,6 +19,13 @@ class Queen: NSObject {
         self.square = square
     }
 
+    /// description is a var of type String, not a func that returns String
+    /// https://stackoverflow.com/questions/24108634/what-is-the-swift-equivalent-of-nsobject-description#24108931
+    /// http://swiftdoc.org/v3.0/protocol/CustomStringConvertible/
+    override var description: String {
+        return square.description
+    }
+
     /// - Parameter square: square to check
     /// - Returns: true if queen attacks square, returns false otherwise
     func doesAttack(square: Square) -> Bool {
