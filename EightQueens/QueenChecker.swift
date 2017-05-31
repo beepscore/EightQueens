@@ -10,16 +10,12 @@ import UIKit
 
 class QueenChecker: NSObject {
 
-    /*
-     Chess has a standard notation for board squares.
-     Could relate row and column numbers to this via an enum.
-     For ease of programming, just use row and column number 0-7.
-
- */
-
-    // number of ways to place 8 queens = number of ways to put first * number of ways to put second,
+    /// Chess has a standard notation for board squares.
+    /// Could relate row and column numbers to this via an enum.
+    /// For ease of programming, just use row and column number 0-7.
 
     /// - Parameter boardSize: board is square boardSize rows x boardSize columns
+    ///   boardSize is 8 for standard chess board
     /// - Parameter queens: queens already on the board
     /// - Returns: number of ways to put a new queen
     class func numberOfWaysToPlaceQueen(boardSize: Int, queens: [Queen]) -> Int {
