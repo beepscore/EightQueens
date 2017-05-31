@@ -11,5 +11,9 @@ import XCTest
 
 class QueenCheckerTests: XCTestCase {
     
+    func testNumberOfWaysToPlaceQueen() {
+        // expect 92? got 5
+        XCTAssertEqual(QueenChecker.numberOfWaysToPlaceQueen(queens: []), 92)
+    }
 
 }
