@@ -30,15 +30,11 @@ class QueenChecker: NSObject {
 
         var ways = 0
 
-        // TODO: consider start with no queens, set of 64 valid squares
-        // for each position of first queen, return valid squares for second queen
-        // for each position of first and second queen, return valid squares for third queen
-        // for each position of queens 0,1,2, return valid squares for fourth queen
-
         // Each queen must be on a different row.
-        // Can increase effiency by adding each queen on one row
+        // Eliminate unnecessary iterations by adding each queen on next row
         let row = queens.count
 
+        // in row, for every valid column, add ways
         for column in 0..<boardSize {
 
             print("row", row, "column", column, "queens.count", queens.count)
