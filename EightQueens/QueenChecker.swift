@@ -35,32 +35,34 @@ class QueenChecker: NSObject {
         // for each position of first and second queen, return valid squares for third queen
         // for each position of queens 0,1,2, return valid squares for fourth queen
 
-        for row in 0..<boardSize {
-            for column in 0..<boardSize {
+        // Each queen must be on a different row.
+        // Can increase effiency by adding each queen on one row
+        let row = queens.count
 
-                print("row", row, "column", column, "queens.count", queens.count)
-                
-                let currentSquare = Square(row: row, column: column)
+        for column in 0..<boardSize {
 
-                var doesAnyQueenAttack = false
-                for queen in queens {
-                    if queen.doesAttack(square: currentSquare) {
-                        // can't add a new queen here
-                        doesAnyQueenAttack = true
-                        break
-                    }
-                }
-                if !doesAnyQueenAttack {
-                    // found a solution
-                    // add new queen, increment ways
-                    var queensAppended = queens
-                    queensAppended.append(Queen(square: currentSquare))
-                    ways += numberOfWaysToPlaceQueen(boardSize: boardSize, queens: queensAppended)
-                }
+            print("row", row, "column", column, "queens.count", queens.count)
 
+            let currentSquare = Square(row: row, column: column)
+            let isSquareOpen = !QueenChecker.doesAnyQueenAttack(queens: queens, square: currentSquare)
+
+            if isSquareOpen {
+                // add new queen, increment ways
+                var queensAppended = queens
+                queensAppended.append(Queen(square: currentSquare))
+                ways += numberOfWaysToPlaceQueen(boardSize: boardSize, queens: queensAppended)
             }
         }
         return ways
+    }
+
+    class func doesAnyQueenAttack(queens: [Queen], square: Square) -> Bool {
+        for queen in queens {
+            if queen.doesAttack(square: square) {
+                return true
+            }
+        }
+        return false
     }
 
 }
