@@ -49,10 +49,12 @@ class QueenChecker: NSObject {
             let isSquareOpen = !QueenChecker.doesAnyQueenAttack(queens: queens, square: currentSquare)
 
             if isSquareOpen {
-                // add queen, recursively call waysToPlaceQueen
-                var queensAppended = queens
-                queensAppended.append(Queen(square: currentSquare))
-                waysToPlaceQueen(boardSize: boardSize, queens: queensAppended, results: &results)
+                // add one queen at currentSquare, then recursively call waysToPlaceQueen
+                // note- on a given row, waysToPlaceQueen may be called multiple times
+                let currentQueen = Queen(square: currentSquare)
+                var queensByAppendingCurrent = queens
+                queensByAppendingCurrent.append(currentQueen)
+                waysToPlaceQueen(boardSize: boardSize, queens: queensByAppendingCurrent, results: &results)
             }
         }
     }
