@@ -11,6 +11,20 @@ import XCTest
 
 class QueenCheckerTests: XCTestCase {
     
+    func testSolutionsBoardSize4() {
+        // expected value per https://en.wikipedia.org/wiki/Eight_queens_puzzle
+        let actual = QueenChecker.solutions(boardSize: 4)
+        XCTAssertEqual(actual.count, 2)
+        let expectedDescription = "[[(row: 0, column: 1), (row: 1, column: 3), (row: 2, column: 0), (row: 3, column: 2)], [(row: 0, column: 2), (row: 1, column: 0), (row: 2, column: 3), (row: 3, column: 1)]]"
+        XCTAssertEqual(actual.description, expectedDescription)
+    }
+
+    func testSolutionsBoardSize8() {
+        // expected value per https://en.wikipedia.org/wiki/Eight_queens_puzzle
+        let actual = QueenChecker.solutions(boardSize: 8)
+        XCTAssertEqual(actual.count, 92)
+    }
+
     func testNumberOfWaysToPlaceQueenBoardSize1() {
         var results: [[Queen]] = []
         QueenChecker.waysToPlaceQueen(boardSize: 1, queens: [], results: &results)
