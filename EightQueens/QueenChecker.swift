@@ -24,12 +24,13 @@ class QueenChecker: NSObject {
     }
 
     /// Called by method solutions()
+    /// recursive method
     /// - Parameter boardSize: count of each side of board, boardSize rows x boardSize columns.
     ///   boardSize is 8 for standard chess board
     /// - Parameter queens: queens already on the board
-    ///   Caller supplies []
+    ///   initial call supplies []
     /// - Parameter results: inout parameter.
-    ///   Caller supplies var results: [[Queen]] = []
+    ///   initial call supplies empty var results: [[Queen]] = []
     ///   After method returns, results contains the ways.
     class func waysToPlaceQueen(boardSize: Int, queens: [Queen], results: inout [[Queen]]) {
 
