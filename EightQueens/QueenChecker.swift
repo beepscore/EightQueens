@@ -15,9 +15,9 @@ class QueenChecker: NSObject {
 
     /// solutions is a wrapper that presents a facade to call waysToPlaceQueen with correct arguments.
     /// - Parameter boardSize: count of each side of board, boardSize rows x boardSize columns.
-    ///   boardSize is 8 for standard chess board
+    ///   default 8 is a standard chess board
     /// - Returns: array of solutions. Each solution is an array of boardSize queens.
-    class func solutions(boardSize: Int) ->  [[Queen]] {
+    class func solutions(boardSize: Int = 8) ->  [[Queen]] {
         var results: [[Queen]] = []
         QueenChecker.waysToPlaceQueen(boardSize: boardSize, queens: [], results: &results)
         return results

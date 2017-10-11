@@ -25,6 +25,13 @@ class QueenCheckerTests: XCTestCase {
         XCTAssertEqual(actual.count, 92)
     }
 
+    func testSolutionsBoardSizeDefault() {
+        // expected value per https://en.wikipedia.org/wiki/Eight_queens_puzzle
+        let actual = QueenChecker.solutions()
+        let expected = QueenChecker.solutions(boardSize: 8)
+        XCTAssertEqual(actual.count, expected.count)
+    }
+
     func testNumberOfWaysToPlaceQueenBoardSize1() {
         var results: [[Queen]] = []
         QueenChecker.waysToPlaceQueen(boardSize: 1, queens: [], results: &results)
